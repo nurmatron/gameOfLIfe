@@ -10,3 +10,7 @@ To run :
 
 To run tests one could right-click the folder test.java -
 and run all tests. ( atleast in intelij)
+
+JDK 17.0.1 
+Junit for testing
+Maven for dependency management
