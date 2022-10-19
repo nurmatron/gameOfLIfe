@@ -32,25 +32,39 @@ public class Board {
     }
 
     /**
-     * method for printing the board to play on
+     * method for buildning the board to play on
      */
-    public void printBoard() {
-        // needs out of bounds check
-        System.out.println("start of generation");
+    public String buildBoard() {
+        StringBuilder boardBuilder = new StringBuilder("");
+        boardBuilder.append("start of generation\n");
+
         for (int y = 0; y < height; y++) {
-            StringBuilder boardBuilder = new StringBuilder("|");
+            boardBuilder.append("|");
+
             for (int x = 0; x < width; x++) {
                 if (this.board[x][y] == 0) {
+
                     boardBuilder.append("0");
+
                 } else {
                     boardBuilder.append("1");
                 }
             }
-            boardBuilder.append("|");
-            System.out.println(boardBuilder);
+            boardBuilder.append("|\n");
+
         }
-        System.out.println("End of generation\n");
+        boardBuilder.append("end of generation\n");
+        return boardBuilder.toString();
     }
+
+    /**
+     * own printing method for each board.
+     * @param boardString
+     */
+    public void printBoard(String boardString) {
+        System.out.println(boardString);
+    }
+
 
     /**
      * @param state      0 or 1 for dead or alive.

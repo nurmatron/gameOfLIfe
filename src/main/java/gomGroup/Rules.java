@@ -62,7 +62,7 @@ public class Rules {
      */
     public void playGameOfLife(Board oldBoard, int startGeneration) {
         if (startGeneration < oldBoard.getHeight()) {
-            oldBoard.printBoard();
+            oldBoard.printBoard(oldBoard.buildBoard());
             Board nextGenerationBoard = createNextGenerationBoard(oldBoard);
             playGameOfLife(nextGenerationBoard, startGeneration + 1);
         }

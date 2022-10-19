@@ -29,4 +29,10 @@ class BoardTest {
         assertEquals(1, board.getState(0, 0));
 
     }
+
+    @Test
+    void buildBoard() {
+
+        assertNotNull(board.buildBoard());
+    }
 }
