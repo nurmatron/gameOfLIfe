@@ -8,5 +8,5 @@ To run :
 3) run main method
 
 
-To run tests one could right-click the folder test.jav
-a  and run all tests. ( atleast in intelij)
+To run tests one could right-click the folder test.java -
+and run all tests. ( atleast in intelij)
