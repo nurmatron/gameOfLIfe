@@ -2,7 +2,6 @@ package gomGroup;
 
 public class TestUtils {
     /**
-     *
      * @param board
      * @return a String of a 2d array flattened.
      */

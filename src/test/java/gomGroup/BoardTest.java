@@ -15,19 +15,18 @@ class BoardTest {
     }
 
 
-
     @Test
     void setState() {
-        assertEquals(0, board.getState(0,0));
-        board.setState(1,0,0);
-        assertEquals(1, board.getState(0,0));
+        assertEquals(0, board.getState(0, 0));
+        board.setState(1, 0, 0);
+        assertEquals(1, board.getState(0, 0));
 
     }
 
     @Test
     void getState() {
-        board.setState(1,0,0);
-        assertEquals(1, board.getState(0,0));
+        board.setState(1, 0, 0);
+        assertEquals(1, board.getState(0, 0));
 
     }
 }

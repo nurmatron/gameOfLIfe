@@ -58,8 +58,7 @@ public class Rules {
 
     /**
      * @param oldBoard
-     * @param startGeneration
-     * A recursive method to run itself and iterate over generations.
+     * @param startGeneration A recursive method to run itself and iterate over generations.
      */
     public void playGameOfLife(Board oldBoard, int startGeneration) {
         if (startGeneration < oldBoard.getHeight()) {
@@ -91,7 +90,7 @@ public class Rules {
                         newGen.setState(0, horizontal, vertical);
                     }
 
-                } else { // if state == 0
+                } else if (oldBoard.getState(horizontal, vertical) == 0) {
                     if (countAliveNeigbours(oldBoard, horizontal, vertical) == 3) {
                         newGen.setState(1, horizontal, vertical);
                     } else {

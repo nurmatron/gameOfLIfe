@@ -52,8 +52,7 @@ class RulesTest {
 
     @Test
     void setStateforFirstBoard() {
-        //this might be considered a flakey test since theres a 50/50 chance to fill a cell..
-        // to try and solve this i made a big board, where the chances for every cell being 0 are decreasingly small.
+        // a test for two boards created with random seeds, they should not match.
         board = new Board(50, 50);
         Board board2 = new Board(50, 50);
         rules.setStateforFirstBoard(board);
@@ -69,18 +68,24 @@ class RulesTest {
     @Test
     void createNextGenerationBoard() {
 
+        // set states for bord to form a vertical line
         board.setState(1, 1, 0);
         board.setState(1, 1, 1);
         board.setState(1, 1, 2);
 
+        // apply the rules of life
         Board nextGeneration = rules.createNextGenerationBoard(board);
 
+        // assert that the board now follows the new pattern based on the rules.
+        // this pattern should be a horizontal line.
         assertEquals(1, nextGeneration.getState(0, 1));
         assertEquals(1, nextGeneration.getState(1, 1));
         assertEquals(1, nextGeneration.getState(2, 1));
 
+        // apply the rules of life again.
         board = rules.createNextGenerationBoard(nextGeneration);
 
+        // we are now back to our vertical line.
         assertEquals(1, board.getState(1, 0));
         assertEquals(1, board.getState(1, 1));
         assertEquals(1, board.getState(1, 2));
