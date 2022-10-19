@@ -1,4 +1,4 @@
-[# gameOfLIfe   \n
+ gameOfLIfe 
  A game of life project I made.
 
 To run : 
@@ -8,5 +8,5 @@ To run :
 3) run main method
 
 
-To run tests one could right click the folder test.jav
+To run tests one could right-click the folder test.jav
 a  and run all tests. ( atleast in intelij)
